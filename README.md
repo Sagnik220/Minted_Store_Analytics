@@ -27,7 +27,7 @@ This repository contains the **internal Data Warehouse** powering Minted Store's
 
 ## 🏗️ Architecture
 
-![Minted Store Analytics Architecture](https://raw.githubusercontent.com/Sagnik220/minted-store-analytics/main/docs/architecture.png)
+![Minted Store Analytics Architecture](https://raw.githubusercontent.com/Sagnik220/Minted_Store_Analytics/main/docs/architecture.png)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
