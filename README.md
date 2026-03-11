@@ -17,13 +17,11 @@
 
 ---
 
-## 📖 What Is This?
+## 📖 Overview
 
-[Minted Store](https://www.mintedstore.in/) is a live Indian e-commerce store selling premium collectibles — Funko Pops, Hot Wheels, Gundam models, Beyblade, and licensed anime figures from brands like Bandai, Mattel, Hasbro, Funko, and Takara Tomy.
+[Minted Store](https://www.mintedstore.in/) is an Indian e-commerce business specialising in premium collectibles — Funko Pops, Hot Wheels, Gundam kits, Beyblade, and licensed anime figures from Bandai, Mattel, Hasbro, Funko, and Takara Tomy.
 
-This project builds a **complete, production-grade Data Warehouse** for Minted Store from scratch — ingesting live data from two APIs, processing it through a Medallion Architecture with PySpark SQL, and surfacing business intelligence across six analytical domains.
-
-**This is not a tutorial project.** Every design decision mirrors what a Data Engineering team at a Series B e-commerce company would build.
+This repository contains the **internal Data Warehouse** powering Minted Store's analytics operations — ingesting live order, fulfilment, and inventory data from Shopify and Shiprocket, transforming it through a Delta Lake Medallion Architecture, and delivering business intelligence across six analytical domains to support day-to-day operations and strategic decisions.
 
 ---
 
@@ -380,21 +378,3 @@ Once Gold tables are populated, connect **Databricks SQL** or **Metabase OSS** t
 - [ ] **Streaming**: Simulate real-time order events with Spark Structured Streaming
 - [ ] **ML**: Churn prediction model on RFM features (MLflow in Databricks CE)
 - [ ] **Alerting**: Notebook-triggered email on pipeline failure via Databricks webhooks
-
----
-
-## 👤 Author
-
-Built by **[Your Name]** — Data Engineer
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://yourportfolio.dev)
-
----
-
-<div align="center">
-
-*Built with real data from a live Indian e-commerce store.*
-*No cloud spend. No mock data. Just engineering.*
-
-</div>
