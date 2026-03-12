@@ -18,7 +18,7 @@ except Exception:
     shiprocket_password = "LOCAL_TEST_PASSWORD"
 
 SHOPIFY_CONFIG = {
-    "shop_name": shopify_shop_domain.split('.')[0], # Extract 'mintedstore'
+    "shop_domain": shopify_shop_domain,
     "access_token": shopify_access_token,
     "storefront_token": shopify_storefront_token,
     "api_version": "2024-01"

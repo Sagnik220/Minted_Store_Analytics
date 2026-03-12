@@ -11,7 +11,7 @@ def fetch_shopify_paginated(endpoint, shopify_config, updated_at_min=None):
     """
     Fetches data from Shopify Admin API handling cursor-based pagination.
     """
-    url = f"https://{shopify_config['shop_name']}.myshopify.com/admin/api/{shopify_config['api_version']}/{endpoint}.json"
+    url = f"https://{shopify_config['shop_domain']}/admin/api/{shopify_config['api_version']}/{endpoint}.json"
     headers = {
         "X-Shopify-Access-Token": shopify_config['access_token'],
         "Content-Type": "application/json"
