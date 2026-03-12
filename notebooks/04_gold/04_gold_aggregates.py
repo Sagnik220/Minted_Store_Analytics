@@ -46,4 +46,32 @@ SELECT
 FROM rfm_base
 """)
 
+# 3. Overall Profitability (Shopify Sales - Expenses)
+print("Running Gold: Daily Profitability")
+spark.sql("""
+CREATE OR REPLACE TABLE minted_gold.profitability_daily AS
+WITH daily_sales AS (
+    SELECT 
+        sales_date,
+        daily_revenue
+    FROM minted_gold.sales_daily
+),
+daily_expenses AS (
+    SELECT 
+        expense_date,
+        SUM(amount) as daily_expenses
+    FROM minted_silver.expenses
+    WHERE expense_date IS NOT NULL
+    GROUP BY 1
+)
+SELECT 
+    COALESCE(s.sales_date, e.expense_date) as date,
+    COALESCE(s.daily_revenue, 0) as revenue,
+    COALESCE(e.daily_expenses, 0) as expenses,
+    COALESCE(s.daily_revenue, 0) - COALESCE(e.daily_expenses, 0) as net_profit
+FROM daily_sales s
+FULL OUTER JOIN daily_expenses e 
+    ON s.sales_date = e.expense_date
+""")
+
 print("Gold Aggregations Complete.")

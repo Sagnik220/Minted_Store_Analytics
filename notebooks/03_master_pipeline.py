@@ -7,10 +7,12 @@ print("=== Starting Minted Store Analytics Pipeline ===")
 print("--- [1/3] BRONZE INGESTION ---")
 dbutils.notebook.run("./01_shopify_bronze/01_shopify_ingest_all", 3600)
 dbutils.notebook.run("./02_shiprocket_bronze/02_shiprocket_ingest_all", 3600)
+dbutils.notebook.run("./05_documents_bronze/01_extract_text", 3600)
 
 # Run Silver
 print("--- [2/3] SILVER TRANSFORMS ---")
 dbutils.notebook.run("./03_silver/03_silver_transforms", 3600)
+dbutils.notebook.run("./06_documents_silver/01_parse_expenses", 3600)
 
 # Run Gold
 print("--- [3/3] GOLD AGGREGATES ---")

@@ -28,4 +28,26 @@ CREATE TABLE IF NOT EXISTS minted_bronze.ingestion_watermarks (
 ) USING DELTA
 """)
 
+# Document Tracking Tables
+spark.sql("""
+CREATE TABLE IF NOT EXISTS minted_bronze.raw_documents (
+    file_path STRING,
+    file_name STRING,
+    extracted_text STRING,
+    ingested_at TIMESTAMP
+) USING DELTA
+""")
+
+spark.sql("""
+CREATE TABLE IF NOT EXISTS minted_silver.expenses (
+    document_id STRING,
+    expense_date DATE,
+    vendor_name STRING,
+    category STRING,
+    amount DOUBLE,
+    raw_text STRING,
+    processed_at TIMESTAMP
+) USING DELTA
+""")
+
 print("Successfully created Databases and Meta tables for Medallion Architecture.")
