@@ -1,8 +1,13 @@
 # Databricks notebook source
 # 02_shiprocket_ingest_all.py - Ingests Shiprocket endpoints to Bronze
 
+# COMMAND ----------
 # MAGIC %run ../00_setup/00_config
+
+# COMMAND ----------
 # MAGIC %run ../00_setup/00_utils
+
+# COMMAND ----------
 
 import requests
 import json

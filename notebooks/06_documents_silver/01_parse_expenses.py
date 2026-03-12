@@ -1,7 +1,10 @@
 # Databricks notebook source
 # 01_parse_expenses.py - Parses raw text from Bronze into structured Silver entities
 
+# COMMAND ----------
 # MAGIC %run ../00_setup/00_config
+
+# COMMAND ----------
 
 import re
 from datetime import datetime

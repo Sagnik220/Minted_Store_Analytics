@@ -1,8 +1,10 @@
 # Databricks notebook source
 # 00_init_databases.py - One-time initialization of databases and tables
 
+# COMMAND ----------
 # MAGIC %run ./00_config
 
+# COMMAND ----------
 spark.sql("CREATE DATABASE IF NOT EXISTS minted_bronze")
 spark.sql("CREATE DATABASE IF NOT EXISTS minted_silver")
 spark.sql("CREATE DATABASE IF NOT EXISTS minted_gold")

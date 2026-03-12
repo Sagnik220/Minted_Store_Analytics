@@ -1,8 +1,13 @@
 # Databricks notebook source
 # 01_shopify_ingest_all.py - Ingests Shopify API endpoints to Bronze
 
+# COMMAND ----------
 # MAGIC %run ../00_setup/00_config
+
+# COMMAND ----------
 # MAGIC %run ../00_setup/00_utils
+
+# COMMAND ----------
 
 import json
 from datetime import datetime

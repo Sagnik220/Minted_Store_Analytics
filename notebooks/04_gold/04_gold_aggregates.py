@@ -1,7 +1,10 @@
 # Databricks notebook source
 # 04_gold_aggregates.py - Aggregates mapped to core business domains
 
+# COMMAND ----------
 # MAGIC %run ../00_setup/00_config
+
+# COMMAND ----------
 
 from pyspark.sql.functions import sum, count, countDistinct, when, col, date_format
 

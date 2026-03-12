@@ -4,7 +4,10 @@
 # COMMAND ----------
 # 01_extract_text.py - Reads PDFs from DBFS and extracts raw text to Bronze
 
+# COMMAND ----------
 # MAGIC %run ../00_setup/00_config
+
+# COMMAND ----------
 
 import fitz  # PyMuPDF
 import os
